@@ -8,12 +8,16 @@ class Utils
       vulcanos = PlanetFactory.vulcanos
 
       (1..DAYS).each do |day|
+        ferengi_point = generating_point(day, ferengi)
+        betasoide_point = generating_point(day, betasoide)
+        vulcanos = generating_point(day, vulcanos)
 
+        
       end
 
       private
 
-      def point(day, planet)
+      def generating_point(day, planet)
         x = planet.distance * Math.cos(day*planet.speedInRadians)
         y = planet.distance * Math.sin(day*planet.speedInRadians)
 
