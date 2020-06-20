@@ -1,1 +1,3 @@
-WeatherJob.perform_later if Weather.first.nil?
+if !Rails.env.test?
+  WeatherJob.perform_later if Weather.first.nil?
+end
