@@ -1,6 +1,7 @@
 class Utils
   class << self
     DAYS = 3650
+    SUN_POSITION = Geometry::Point[0, 0]
 
     def run
       ferengi = PlanetFactory.ferengi
@@ -12,7 +13,7 @@ class Utils
         betasoide_point = generating_point(day, betasoide)
         vulcanos = generating_point(day, vulcanos)
 
-        
+
       end
 
       private
@@ -22,6 +23,12 @@ class Utils
         y = planet.distance * Math.sin(day*planet.speedInRadians)
 
         Geometry::Point[x, y]
+      end
+
+      def collinears?(p1, p2, p3)
+        result = p1.x * (p2.y - p3.y) + p2.x * (p3.y - p1.y) + p3.x * (p1.y - p2.y)
+        
+        result == 0
       end
     end
   end
