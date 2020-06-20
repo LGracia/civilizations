@@ -1,3 +1,3 @@
 class Weather < ApplicationRecord
-  enum weather_type: { rainy: 'lluvioso', drought: 'sequia' }
+  enum weather_type: { lluvioso: 'lluvioso', sequia: 'sequia', optimo: 'optimo' }
 end
