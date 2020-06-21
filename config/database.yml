@@ -23,6 +23,8 @@ test:
 
 production:
   <<: *default
-  database: civilizations_production
-  username: civilizations
-  password: <%= ENV['CIVILIZATIONS_DATABASE_PASSWORD'] %>
+  database: d8c6n3paetnfv9
+  username: byvnodqrvxghsc
+  password: 55161993c5da567a5e7e2491ba8183666eab80959b212d043eac2ff9769ffa70
+  host: postgres://byvnodqrvxghsc:55161993c5da567a5e7e2491ba8183666eab80959b212d043eac2ff9769ffa70@ec2-52-44-166-58.compute-1.amazonaws.com:5432/d8c6n3paetnfv9
+  port: 5432
